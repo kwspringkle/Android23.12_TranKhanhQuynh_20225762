@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listFragment">
+
+    <!-- Fragment hiển thị danh sách -->
+    <fragment
+        android:id="@+id/listFragment"
+        android:name="com.example.dssv2.ListFragment"
+        android:label="Danh sách sinh viên"
+        tools:layout="@layout/fragment_list">
+
+        <!-- Điều hướng đến màn hình Thêm -->
+        <action
+            android:id="@+id/action_listFragment_to_addFragment"
+            app:destination="@id/addFragment" />
+
+        <!-- Điều hướng đến màn hình Cập nhật -->
+        <action
+            android:id="@+id/action_listFragment_to_updateFragment"
+            app:destination="@id/updateFragment" />
+    </fragment>
+
+    <!-- Fragment thêm sinh viên -->
+    <fragment
+        android:id="@+id/addFragment"
+        android:name="com.example.dssv2.AddFragment"
+        android:label="Thêm sinh viên"
+        tools:layout="@layout/fragment_add" />
+
+    <!-- Fragment cập nhật sinh viên -->
+    <fragment
+        android:id="@+id/updateFragment"
+        android:name="com.example.dssv2.UpdateFragment"
+        android:label="Cập nhật sinh viên"
+        tools:layout="@layout/fragment_update" />
+
+</navigation>
